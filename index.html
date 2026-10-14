@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171512">
+  <meta name="description" content="Jukia — moda com atitude, inspirada no rock brasileiro e na irreverência de Rita Lee.">
+  <title>Jukia — Moda & Atitude</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">
+    <span>ROCK • LIBERDADE • PERSONALIDADE</span>
+    <span class="announcement-note">Vista quem você é. <a href="#catalogo">Descubra a coleção ↗</a></span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Jukia, página inicial">
+      <span class="brand-name">jukia<span>®</span></span>
+      <span class="brand-subtitle">MODA COM ATITUDE</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="nav" id="navigation">
+      <a href="#inicio">Início</a>
+      <a href="#categorias">Coleções</a>
+      <a href="#catalogo">Loja</a>
+      <a href="#manifesto">Nossa vibe</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="searchToggle" aria-label="Abrir busca">⌕</button>
+      <button class="cart-button" id="cartButton" aria-label="Abrir sacola">SACOLA <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <div class="search-panel" id="searchPanel" hidden>
+    <label for="searchInput">O que você está procurando?</label>
+    <div class="search-row">
+      <input id="searchInput" type="search" placeholder="Busque camisetas, meias...">
+      <button id="searchButton">BUSCAR ↗</button>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> UMA LOJA PARA QUEM NÃO VEIO SE ENCAIXAR</p>
+        <h1>Vista sua<br><em>própria</em> atitude.</h1>
+        <p class="hero-description">Peças cheias de personalidade, com espírito livre, energia do rock e um toque irreverente inspirado por Rita Lee.</p>
+        <a class="button button-light" href="#catalogo">EXPLORAR A LOJA <span>↗</span></a>
+        <div class="hero-footnote"><span>01 / COLEÇÃO AUTORAL</span><span>FEITA PARA SER VOCÊ</span></div>
+      </div>
+      <div class="hero-visual" role="img" aria-label="Editorial de moda com roupa preta e estética rock">
+        <div class="hero-sticker">SEJA<br>IN<br>DOMÁVEL ✳</div>
+        <div class="hero-image-caption"><span>JU-KI-A</span><span>ROCK YOUR WAY</span></div>
+      </div>
+      <span class="hero-side-text">JUKIA STUDIO — BRASIL</span>
+    </section>
+
+    <section class="ticker" aria-label="Manifesto da marca">
+      <div>SEM REGRAS <span>✳</span> SEM RÓTULOS <span>✳</span> SEJA VOCÊ <span>✳</span> ROCK DO SEU JEITO <span>✳</span> SEM REGRAS <span>✳</span></div>
+    </section>
+
+    <section class="section categories" id="categorias">
+      <div class="section-heading">
+        <div><p class="eyebrow">ESCOLHA SUA VIBE</p><h2>Seu estilo.<br><em>Suas regras.</em></h2></div>
+        <p class="section-intro">Do básico nada básico aos detalhes que mudam tudo. Encontre a peça que fala por você.</p>
+      </div>
+      <div class="category-grid">
+        <a href="#catalogo" class="category-card category-shirt" data-category-link="Camiseta">
+          <span class="category-number">01 / ESSENCIAIS</span><span class="category-label">Camisetas <b>↗</b></span>
+        </a>
+        <a href="#catalogo" class="category-card category-accessory" data-category-link="Acessório">
+          <span class="category-number">02 / DETALHES</span><span class="category-label">Acessórios <b>↗</b></span>
+        </a>
+        <a href="#catalogo" class="category-card category-limited" data-category-link="Edição limitada">
+          <span class="category-number">03 / ATITUDE EXTRA</span><span class="category-label">Edição limitada <b>↗</b></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="shop-section" id="catalogo">
+      <div class="section shop-inner">
+        <div class="shop-heading">
+          <div><p class="eyebrow">PEÇAS COM PERSONALIDADE</p><h2>Favoritas da <em>Jukia.</em></h2><p id="resultsCount" class="muted">Confira a seleção da loja</p></div>
+          <label class="sort-label">ORDENAR POR
+            <select id="sortSelect">
+              <option value="featured">Destaques</option>
+              <option value="price-asc">Menor preço</option>
+              <option value="price-desc">Maior preço</option>
+              <option value="name">Nome</option>
+            </select>
+          </label>
+        </div>
+        <div class="shop-tools">
+          <div class="filter-pills" id="filterPills">
+            <button class="filter-pill active" data-filter="Todos">Tudo</button>
+            <button class="filter-pill" data-filter="Camiseta">Camisetas</button>
+            <button class="filter-pill" data-filter="Acessório">Acessórios</button>
+            <button class="filter-pill" data-filter="Edição limitada">Edição limitada</button>
+          </div>
+          <span class="muted">Feito para expressar quem você é.</span>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+        <div class="empty-state" id="emptyState" hidden><h3>Nada por aqui ainda.</h3><p>Tente outra busca ou escolha uma categoria diferente.</p><button class="button button-dark" id="resetSearch">VER TODAS AS PEÇAS</button></div>
+      </div>
+    </section>
+
+    <section class="manifesto" id="manifesto">
+      <div class="manifesto-image" role="img" aria-label="Detalhe de look preto com acessórios de estilo rock"></div>
+      <div class="manifesto-copy">
+        <p class="eyebrow">MAIS QUE ROUPA, UMA FORMA DE SER</p>
+        <h2>A moda muda.<br><em>A atitude fica.</em></h2>
+        <p>A Jukia celebra a criatividade, a liberdade e quem não tem medo de misturar referências. Inspirada pela irreverência do rock brasileiro e pelo espírito livre de Rita Lee.</p>
+        <a href="#catalogo" class="text-link">ENCONTRE SUA PEÇA <span>↗</span></a>
+        <span class="manifesto-mark">J.</span>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div><p class="eyebrow">CARTA DA JUKIA</p><h2>Novidades no seu <em>ritmo.</em></h2><p>Receba lançamentos, ideias de looks e novidades da loja.</p></div>
+      <form id="newsletterForm">
+        <label for="newsletterEmail" class="visually-hidden">Seu e-mail</label>
+        <div class="newsletter-input"><input type="email" id="newsletterEmail" placeholder="Seu melhor e-mail" required><button type="submit" aria-label="Cadastrar e-mail">↗</button></div>
+        <small id="newsletterMessage">Sem spam. Só boas novidades.</small>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <a class="brand footer-brand" href="#inicio"><span class="brand-name">jukia<span>®</span></span><span class="brand-subtitle">MODA COM ATITUDE</span></a>
+      <p>Para quem faz do próprio estilo<br>uma declaração de liberdade.</p>
+      <div class="footer-links"><a href="#catalogo">Loja</a><a href="#categorias">Coleções</a><a href="#manifesto">Nossa vibe</a><a href="#inicio">Voltar ao topo ↑</a></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="currentYear"></span> Jukia Studio.</span><span>INDEPENDENTE. AUTÊNTICA. LIVRE.</span><span>Site demonstrativo — personalize preços, estoque e meios de pagamento antes de vender.</span></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="modal-header"><div><p class="eyebrow">SEU ESTILO, SUA ESCOLHA</p><h2 id="cartTitle">Sua sacola <span id="cartCountModal">(0)</span></h2></div><button class="close-modal" id="closeModal" aria-label="Fechar sacola">×</button></div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-total"><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
+      <button class="button button-dark checkout-button" id="checkoutButton">FINALIZAR PEDIDO ↗</button>
+      <p class="cart-note">Demonstração de vitrine: a finalização real precisa ser conectada a um sistema de vendas.</p>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+JUKIA — LOJA DE MODA
+
+Arquivos:
+- index.html: estrutura da página
+- style.css: identidade visual e layout responsivo
+- script.js: produtos demonstrativos, busca, filtros, ordenação e sacola
+
+Como abrir:
+1. Mantenha os três arquivos na mesma pasta.
+2. Abra index.html no navegador.
+3. Para editar, use VS Code ou outro editor de código.
+
+Importante:
+- Os produtos, preços e estoque são exemplos demonstrativos.
+- As imagens são carregadas de URLs externas e exigem internet.
+- O carrinho funciona no navegador, mas não processa pagamentos nem envia pedidos.
+- A inspiração em Rita Lee é temática; este modelo não representa uma loja oficial nem implica endosso da artista.
+- Antes de vender, revise direitos de uso de imagens/marcas e integre uma plataforma de pagamentos e gestão de pedidos.
